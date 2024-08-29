@@ -22,11 +22,11 @@ function User() {
             <h1>NoteShare</h1>
           </div>
           <span className="std-navbar-links">
-            <span className='button'>Home</span>
+            <span className='button' onClick={() => { navigat('/') }}>Home</span>
             <span className='button'>Add Notes</span>
             <span data-bs-toggle="tooltip" data-bs-placement="top" title="LogOut"
               className='logOut-btn'
-              onClick={() => { navigat('/') }} >
+               >
               {<IoMdExit />}
             </span>
           </span>

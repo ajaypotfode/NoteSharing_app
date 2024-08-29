@@ -6,23 +6,22 @@ import Statistics from './Statastics'
 import { FaChartSimple, FaCircleUser } from 'react-icons/fa6'
 import { GrDocumentText, GrFormAdd } from 'react-icons/gr'
 import { IoMdExit } from 'react-icons/io'
+import { useNavigate } from 'react-router-dom'
 
 const Admin = () => {
+  const navigat = useNavigate(null)
   return (
     <>
       <div className="admin-dashboard container-fluid">
         <header className="admin-header">
           <div className="admin-profile">
-            {/* <div className="img-section">
-
-            </div> */}
             <h3>Admin</h3>
           </div>
 
          <h1>Admin Dashboard</h1>
          <div className='header-btn'>
-         <span className='button'>Home</span>
-         <span className='button'>Notes</span>
+         <span className='button' onClick={() => { navigat('/') }}>Home</span>
+         <span className='button' onClick={() => { navigat('/user') }}>Notes</span>
          <span data-bs-toggle="tooltip" data-bs-placement="top" title="Logout" className='logout' >{<IoMdExit/>}</span>
          </div>
         </header>
